@@ -1,0 +1,94 @@
+2017-12-28 18:09:27.455 - INFO 10836 [           main] com.achain.common.OfflineTest            : Starting OfflineTest on GRB-A04-00030 with PID 10836 (started by fanyukun in D:\project\Achain-Exchange\java-example\act-huobi-exchange)
+2017-12-28 18:09:27.458 - INFO 10836 [           main] com.achain.common.OfflineTest            : The following profiles are active: dev
+2017-12-28 18:09:27.622 - INFO 10836 [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@f736069: startup date [Thu Dec 28 18:09:27 CST 2017]; root of context hierarchy
+2017-12-28 18:09:28.092 - WARN 10836 [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'offlineTest': Unsatisfied dependency expressed through field 'offline'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.achain.common.IOffline' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2017-12-28 18:09:28.272 -ERROR 10836 [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field offline in com.achain.common.OfflineTest required a bean of type 'com.achain.common.IOffline' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.achain.common.IOffline' in your configuration.
+
+2017-12-28 18:09:28.279 -ERROR 10836 [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6b9651f3] to prepare test instance [com.achain.common.OfflineTest@4c012563]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'offlineTest': Unsatisfied dependency expressed through field 'offline'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.achain.common.IOffline' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.achain.common.IOffline' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1493)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 42 common frames omitted
+2017-12-28 23:02:39.296 - INFO 7768 [           main] c.a.s.impl.TransactionServiceImplTest    : Starting TransactionServiceImplTest on GRB-A04-00030 with PID 7768 (started by fanyukun in D:\project\Achain-Exchange\java-example\act-huobi-exchange)
+2017-12-28 23:02:39.299 - INFO 7768 [           main] c.a.s.impl.TransactionServiceImplTest    : The following profiles are active: dev
+2017-12-28 23:02:39.448 - INFO 7768 [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@10feca44: startup date [Thu Dec 28 23:02:39 CST 2017]; root of context hierarchy
+2017-12-28 23:02:42.737 - INFO 7768 [           main] c.a.s.impl.TransactionServiceImplTest    : Started TransactionServiceImplTest in 4.989 seconds (JVM running for 6.537)
+2017-12-28 23:02:42.853 - INFO 7768 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|Start offline sign
+2017-12-28 23:02:43.067 - INFO 7768 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|offline sign success.result=[{"operations":[{"data":{"claim_input_data":"","balance_id":"ACTh96kuFvWfucUM6Rru7dWU9xYbjqf7v7q","amount":101000},"type":"withdraw_op_type"},{"data":{"amount":100000,"condition":{"slate_id":0,"data":{"owner":"ACTBk37yzeFcJLqWG4s5Bp9WJqMMLhYvYHop"},"balance_type":"withdraw_common_type","asset_id":0,"type":"withdraw_signature_type"}},"type":"deposit_op_type"}],"alp_account":"","expiration":"2017-12-28T16:02:42","signatures":["1f2ed4245aa969f12b39aa252389b5d3833fa139b32978d4c33a9c5da367e6edd2896b700f61b5e11eafafe7999e68d8e8fbd9a48b7bf7000739a641a8f9670a1b"],"alp_inport_asset":{"amount":0,"asset_id":0}}]
+2017-12-28 23:02:43.076 - INFO 7768 [       Thread-1] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@10feca44: startup date [Thu Dec 28 23:02:39 CST 2017]; root of context hierarchy
+2017-12-28 23:04:15.580 - INFO 7468 [           main] c.a.s.impl.TransactionServiceImplTest    : Starting TransactionServiceImplTest on GRB-A04-00030 with PID 7468 (started by fanyukun in D:\project\Achain-Exchange\java-example\act-huobi-exchange)
+2017-12-28 23:04:15.583 - INFO 7468 [           main] c.a.s.impl.TransactionServiceImplTest    : The following profiles are active: dev
+2017-12-28 23:04:15.716 - INFO 7468 [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@10feca44: startup date [Thu Dec 28 23:04:15 CST 2017]; root of context hierarchy
+2017-12-28 23:04:18.614 - INFO 7468 [           main] c.a.s.impl.TransactionServiceImplTest    : Started TransactionServiceImplTest in 4.447 seconds (JVM running for 6.042)
+2017-12-28 23:04:18.710 - INFO 7468 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|Start offline sign
+2017-12-28 23:04:19.008 - INFO 7468 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|offline sign success.result=[{"operations":[{"data":{"claim_input_data":"","balance_id":"ACTh96kuFvWfucUM6Rru7dWU9xYbjqf7v7q","amount":101000},"type":"withdraw_op_type"},{"data":{"amount":100000,"condition":{"slate_id":0,"data":{"owner":"ACTBk37yzeFcJLqWG4s5Bp9WJqMMLhYvYHop"},"balance_type":"withdraw_common_type","asset_id":0,"type":"withdraw_signature_type"}},"type":"deposit_op_type"}],"alp_account":"","expiration":"2017-12-28T16:04:18","signatures":["1f286bd77e29fdbd5eea663414ee0c262bf4c1fee1ffb69f94b81babbcb11489283085e471def35e62f71a6a6269b85c7afabfff548f749403cd66ccb0ff5f7856"],"alp_inport_asset":{"amount":0,"asset_id":0}}]
+2017-12-28 23:04:19.080 - INFO 7468 [       Thread-1] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@10feca44: startup date [Thu Dec 28 23:04:15 CST 2017]; root of context hierarchy
+2017-12-28 23:06:58.819 - INFO 8172 [           main] c.a.s.impl.TransactionServiceImplTest    : Starting TransactionServiceImplTest on GRB-A04-00030 with PID 8172 (started by fanyukun in D:\project\Achain-Exchange\java-example\act-huobi-exchange)
+2017-12-28 23:06:58.821 - INFO 8172 [           main] c.a.s.impl.TransactionServiceImplTest    : The following profiles are active: dev
+2017-12-28 23:06:59.457 - INFO 8172 [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@10feca44: startup date [Thu Dec 28 23:06:59 CST 2017]; root of context hierarchy
+2017-12-28 23:07:02.327 - INFO 8172 [           main] c.a.s.impl.TransactionServiceImplTest    : Started TransactionServiceImplTest in 4.984 seconds (JVM running for 6.5)
+2017-12-28 23:07:02.411 - INFO 8172 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|Start offline sign
+2017-12-28 23:07:02.567 - INFO 8172 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|offline sign success.result=[{"operations":[{"data":{"claim_input_data":"","balance_id":"ACTh96kuFvWfucUM6Rru7dWU9xYbjqf7v7q","amount":101000},"type":"withdraw_op_type"},{"data":{"amount":100000,"condition":{"slate_id":0,"data":{"owner":"ACTBk37yzeFcJLqWG4s5Bp9WJqMMLhYvYHop"},"balance_type":"withdraw_common_type","asset_id":0,"type":"withdraw_signature_type"}},"type":"deposit_op_type"}],"alp_account":"","expiration":"2017-12-28T16:07:02","signatures":["20703dadfe188de6278cc1a40c7aaa63223aa3c3da3ee25d9b33bc37c287aa8dbf33a6f012927f59dadc0f9ccd9481e55b77dd215ccd6c660a73341853835ec437"],"alp_inport_asset":{"amount":0,"asset_id":0}}]
+2017-12-28 23:07:02.580 - INFO 8172 [       Thread-1] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@10feca44: startup date [Thu Dec 28 23:06:59 CST 2017]; root of context hierarchy

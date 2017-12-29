@@ -1,0 +1,6 @@
+2017-12-29 10:38:57.736 -ERROR 1224 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|broadcast fail!|
+2017-12-29 10:41:21.788 -ERROR 1388 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|broadcast fail!|No http response OR parameter illegal
+2017-12-29 10:44:55.993 -ERROR 2076 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|broadcast fail!|No http response OR parameter illegal
+2017-12-29 10:46:16.060 -ERROR 908 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|broadcast fail!|No http response OR parameter illegal
+2017-12-29 10:51:11.346 -ERROR 1968 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|broadcast fail!|No http response OR parameter illegal
+2017-12-29 10:53:10.752 -ERROR 7188 [           main] c.a.service.impl.TransactionServiceImpl  : offlineSign|broadcast fail!|No http response OR parameter illegal
