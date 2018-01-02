@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * @author fyk
@@ -143,6 +144,7 @@ public class TransactionServiceImpl implements ITransactionService {
             log.error("offlineSign|transfer to address=[{}]，illegal address", checkAddress);
             return ResultUtils.resultFailMap("204", "illegal address");
         }
+        String memo = UUID.randomUUID().toString().replaceAll("-", "");
         try {
             Transaction trx;
             if (StringUtils.isEmpty(contractId)) {
@@ -150,7 +152,7 @@ public class TransactionServiceImpl implements ITransactionService {
                         new ACTPrivateKey(privateKey),
                         (long) (Double.parseDouble(amount) * 100000),
                         toAddress,
-                        ""
+                        memo
                 );
             } else {
                 contractId = contractId.trim();
